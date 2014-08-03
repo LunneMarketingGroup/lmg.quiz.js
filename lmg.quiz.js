@@ -7,17 +7,18 @@
 		
 	DEFAULT SETTINGS
 	
-	container 	         = #quiz
-	start		         = #start
-	form		         = #quiz_form
-	questions	         = #questions
-	question	         = .question
-	results		         = #results
-	prev		         = #prev
-	next		         = #next
-	submit	 	         = #submit
-	process_url	         = <blank>
+	container 	= #quiz
+	start		= #start
+	form		= #quiz_form
+	questions	= #questions
+	question	= .question
+	results		= #results
+	prev		= #prev
+	next		= #next
+	submit		= #submit
+	process_url	= <blank>
 	answers_are_required = false
+	
 	
 	DEFAULT HTML STRUCTURE
 	
@@ -109,8 +110,9 @@ LMG.quiz = {
 	},
 	
 	question_is_answered:function() {
-        
+
         var question_id = this.this_question_id();
+
         if(question_id>0) {
             var question = this.current_question();
             var checked = question.find('input:checked');
